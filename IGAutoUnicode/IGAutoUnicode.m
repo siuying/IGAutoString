@@ -29,7 +29,6 @@
         return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     }
     
-
     // if encoding is Big5, try possible variants first
     if (self.shouldTryBig5Variant && encoding == kCFStringEncodingBig5) {
         if (!encoded) {
@@ -44,6 +43,11 @@
     if (!encoded) {
         NSStringEncoding nsEncoding = CFStringConvertEncodingToNSStringEncoding(encoding);
         encoded = [[NSString alloc] initWithData:data encoding:nsEncoding];
+    }
+
+    // if all failed, try UTF8 anyway
+    if (!encoded) {
+        encoded = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     }
 
     return encoded;
