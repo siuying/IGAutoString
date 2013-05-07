@@ -7,19 +7,19 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
-#import "IGAutoUnicode.h"
+#import "IGAutoString.h"
 
-@interface IGAutoUnicodeTests : SenTestCase
-@property (nonatomic, strong) IGAutoUnicode* unicode;
+@interface IGAutoStringTests : SenTestCase
+@property (nonatomic, strong) IGAutoString* unicode;
 @end
 
-@implementation IGAutoUnicodeTests
+@implementation IGAutoStringTests
 
 - (void)setUp
 {
     [super setUp];
 
-    self.unicode = [[IGAutoUnicode alloc] init];
+    self.unicode = [[IGAutoString alloc] init];
 }
 
 - (void)tearDown

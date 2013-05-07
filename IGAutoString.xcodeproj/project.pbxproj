@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		54ABD3F41738CA6E00825BAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD3F31738CA6E00825BAD /* Foundation.framework */; };
-		54ABD3F91738CA6F00825BAD /* IGAutoUnicode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 54ABD3F81738CA6F00825BAD /* IGAutoUnicode.h */; };
-		54ABD3FB1738CA6F00825BAD /* IGAutoUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 54ABD3FA1738CA6F00825BAD /* IGAutoUnicode.m */; };
 		54ABD4031738CA6F00825BAD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD4021738CA6F00825BAD /* SenTestingKit.framework */; };
 		54ABD4051738CA6F00825BAD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD4041738CA6F00825BAD /* UIKit.framework */; };
 		54ABD4061738CA6F00825BAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD3F31738CA6E00825BAD /* Foundation.framework */; };
-		54ABD40F1738CA6F00825BAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD40D1738CA6F00825BAD /* InfoPlist.strings */; };
-		54ABD4121738CA6F00825BAD /* IGAutoUnicodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54ABD4111738CA6F00825BAD /* IGAutoUnicodeTests.m */; };
-		54ABD4F31738D00200825BAD /* IGAutoUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 54ABD3FA1738CA6F00825BAD /* IGAutoUnicode.m */; };
 		54ABD50A1738D1E700825BAD /* libUniversalDetector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD4FE1738D0FF00825BAD /* libUniversalDetector.a */; };
 		54ABD50B1738D1EF00825BAD /* libUniversalDetector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD4FE1738D0FF00825BAD /* libUniversalDetector.a */; };
 		54ABD50D1738D20200825BAD /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD50C1738D20200825BAD /* libc++.dylib */; };
 		54ABD50E1738D20C00825BAD /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD50C1738D20200825BAD /* libc++.dylib */; };
-		54ABD5151738D2BB00825BAD /* ascii.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD50F1738D2BB00825BAD /* ascii.html */; };
-		54ABD5161738D2BB00825BAD /* jijicom.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD5101738D2BB00825BAD /* jijicom.html */; };
-		54ABD5171738D2BB00825BAD /* mingpao.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD5111738D2BB00825BAD /* mingpao.html */; };
-		54ABD5181738D2BB00825BAD /* moe.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD5121738D2BB00825BAD /* moe.html */; };
-		54ABD5191738D2BB00825BAD /* theverge.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD5131738D2BB00825BAD /* theverge.html */; };
-		54ABD51A1738D2BB00825BAD /* yomiuri.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD5141738D2BB00825BAD /* yomiuri.html */; };
+		54ABD5201738DBCF00825BAD /* IGAutoString.m in Sources */ = {isa = PBXBuildFile; fileRef = 54ABD51F1738DBCF00825BAD /* IGAutoString.m */; };
+		54ABD5211738DBCF00825BAD /* IGAutoString.m in Sources */ = {isa = PBXBuildFile; fileRef = 54ABD51F1738DBCF00825BAD /* IGAutoString.m */; };
+		54ABD5241738DBEA00825BAD /* IGAutoStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54ABD5231738DBEA00825BAD /* IGAutoStringTests.m */; };
+		54ABD52B1738DBF300825BAD /* ascii.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD5251738DBF300825BAD /* ascii.html */; };
+		54ABD52C1738DBF300825BAD /* jijicom.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD5261738DBF300825BAD /* jijicom.html */; };
+		54ABD52D1738DBF300825BAD /* mingpao.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD5271738DBF300825BAD /* mingpao.html */; };
+		54ABD52E1738DBF300825BAD /* moe.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD5281738DBF300825BAD /* moe.html */; };
+		54ABD52F1738DBF300825BAD /* theverge.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD5291738DBF300825BAD /* theverge.html */; };
+		54ABD5301738DBF300825BAD /* yomiuri.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD52A1738DBF300825BAD /* yomiuri.html */; };
+		54ABD5341738DC0400825BAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD5321738DC0400825BAD /* InfoPlist.strings */; };
+		54ABD5361738DC0900825BAD /* IGAutoStringTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD5351738DC0900825BAD /* IGAutoStringTests-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,32 +66,31 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				54ABD3F91738CA6F00825BAD /* IGAutoUnicode.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		54ABD3F01738CA6E00825BAD /* libIGAutoUnicode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIGAutoUnicode.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		54ABD3F01738CA6E00825BAD /* libIGAutoString.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIGAutoString.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		54ABD3F31738CA6E00825BAD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		54ABD3F71738CA6F00825BAD /* IGAutoUnicode-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IGAutoUnicode-Prefix.pch"; sourceTree = "<group>"; };
-		54ABD3F81738CA6F00825BAD /* IGAutoUnicode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGAutoUnicode.h; sourceTree = "<group>"; };
-		54ABD3FA1738CA6F00825BAD /* IGAutoUnicode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGAutoUnicode.m; sourceTree = "<group>"; };
-		54ABD4011738CA6F00825BAD /* IGAutoUnicodeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IGAutoUnicodeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54ABD4011738CA6F00825BAD /* IGAutoStringTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IGAutoStringTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54ABD4021738CA6F00825BAD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		54ABD4041738CA6F00825BAD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		54ABD40C1738CA6F00825BAD /* IGAutoUnicodeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IGAutoUnicodeTests-Info.plist"; sourceTree = "<group>"; };
-		54ABD40E1738CA6F00825BAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		54ABD4111738CA6F00825BAD /* IGAutoUnicodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGAutoUnicodeTests.m; sourceTree = "<group>"; };
 		54ABD4F81738D0FF00825BAD /* UniversalDetector.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UniversalDetector.xcodeproj; path = External/UniversalDetector/UniversalDetector.xcodeproj; sourceTree = "<group>"; };
 		54ABD50C1738D20200825BAD /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
-		54ABD50F1738D2BB00825BAD /* ascii.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ascii.html; sourceTree = "<group>"; };
-		54ABD5101738D2BB00825BAD /* jijicom.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jijicom.html; sourceTree = "<group>"; };
-		54ABD5111738D2BB00825BAD /* mingpao.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mingpao.html; sourceTree = "<group>"; };
-		54ABD5121738D2BB00825BAD /* moe.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = moe.html; sourceTree = "<group>"; };
-		54ABD5131738D2BB00825BAD /* theverge.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = theverge.html; sourceTree = "<group>"; };
-		54ABD5141738D2BB00825BAD /* yomiuri.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yomiuri.html; sourceTree = "<group>"; };
+		54ABD51E1738DBCF00825BAD /* IGAutoString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGAutoString.h; path = IGAutoString/IGAutoString.h; sourceTree = SOURCE_ROOT; };
+		54ABD51F1738DBCF00825BAD /* IGAutoString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IGAutoString.m; path = IGAutoString/IGAutoString.m; sourceTree = SOURCE_ROOT; };
+		54ABD5221738DBD800825BAD /* IGAutoString-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "IGAutoString-Prefix.pch"; path = "IGAutoString/IGAutoString-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		54ABD5231738DBEA00825BAD /* IGAutoStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IGAutoStringTests.m; path = IGAutoStringTests/IGAutoStringTests.m; sourceTree = SOURCE_ROOT; };
+		54ABD5251738DBF300825BAD /* ascii.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = ascii.html; path = IGAutoStringTests/Fixtures/ascii.html; sourceTree = SOURCE_ROOT; };
+		54ABD5261738DBF300825BAD /* jijicom.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = jijicom.html; path = IGAutoStringTests/Fixtures/jijicom.html; sourceTree = SOURCE_ROOT; };
+		54ABD5271738DBF300825BAD /* mingpao.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = mingpao.html; path = IGAutoStringTests/Fixtures/mingpao.html; sourceTree = SOURCE_ROOT; };
+		54ABD5281738DBF300825BAD /* moe.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = moe.html; path = IGAutoStringTests/Fixtures/moe.html; sourceTree = SOURCE_ROOT; };
+		54ABD5291738DBF300825BAD /* theverge.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = theverge.html; path = IGAutoStringTests/Fixtures/theverge.html; sourceTree = SOURCE_ROOT; };
+		54ABD52A1738DBF300825BAD /* yomiuri.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = yomiuri.html; path = IGAutoStringTests/Fixtures/yomiuri.html; sourceTree = SOURCE_ROOT; };
+		54ABD5331738DC0400825BAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = IGAutoStringTests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		54ABD5351738DC0900825BAD /* IGAutoStringTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "IGAutoStringTests-Info.plist"; path = "IGAutoStringTests/IGAutoStringTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +122,8 @@
 		54ABD3E71738CA6E00825BAD = {
 			isa = PBXGroup;
 			children = (
-				54ABD3F51738CA6E00825BAD /* IGAutoUnicode */,
-				54ABD40A1738CA6F00825BAD /* IGAutoUnicodeTests */,
+				54ABD3F51738CA6E00825BAD /* IGAutoString */,
+				54ABD40A1738CA6F00825BAD /* IGAutoStringTests */,
 				54ABD3F21738CA6E00825BAD /* Frameworks */,
 				54ABD3F11738CA6E00825BAD /* Products */,
 			);
@@ -133,8 +132,8 @@
 		54ABD3F11738CA6E00825BAD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				54ABD3F01738CA6E00825BAD /* libIGAutoUnicode.a */,
-				54ABD4011738CA6F00825BAD /* IGAutoUnicodeTests.octest */,
+				54ABD3F01738CA6E00825BAD /* libIGAutoString.a */,
+				54ABD4011738CA6F00825BAD /* IGAutoStringTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,39 +150,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		54ABD3F51738CA6E00825BAD /* IGAutoUnicode */ = {
+		54ABD3F51738CA6E00825BAD /* IGAutoString */ = {
 			isa = PBXGroup;
 			children = (
-				54ABD3F81738CA6F00825BAD /* IGAutoUnicode.h */,
-				54ABD3FA1738CA6F00825BAD /* IGAutoUnicode.m */,
+				54ABD51E1738DBCF00825BAD /* IGAutoString.h */,
+				54ABD51F1738DBCF00825BAD /* IGAutoString.m */,
 				54ABD3F61738CA6F00825BAD /* Supporting Files */,
 			);
+			name = IGAutoString;
 			path = IGAutoUnicode;
 			sourceTree = "<group>";
 		};
 		54ABD3F61738CA6F00825BAD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				54ABD3F71738CA6F00825BAD /* IGAutoUnicode-Prefix.pch */,
+				54ABD5221738DBD800825BAD /* IGAutoString-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		54ABD40A1738CA6F00825BAD /* IGAutoUnicodeTests */ = {
+		54ABD40A1738CA6F00825BAD /* IGAutoStringTests */ = {
 			isa = PBXGroup;
 			children = (
+				54ABD5231738DBEA00825BAD /* IGAutoStringTests.m */,
 				54ABD4EE1738CEC500825BAD /* Fixtures */,
-				54ABD4111738CA6F00825BAD /* IGAutoUnicodeTests.m */,
 				54ABD40B1738CA6F00825BAD /* Supporting Files */,
 			);
+			name = IGAutoStringTests;
 			path = IGAutoUnicodeTests;
 			sourceTree = "<group>";
 		};
 		54ABD40B1738CA6F00825BAD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				54ABD40C1738CA6F00825BAD /* IGAutoUnicodeTests-Info.plist */,
-				54ABD40D1738CA6F00825BAD /* InfoPlist.strings */,
+				54ABD5351738DC0900825BAD /* IGAutoStringTests-Info.plist */,
+				54ABD5321738DC0400825BAD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -191,12 +192,12 @@
 		54ABD4EE1738CEC500825BAD /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
-				54ABD50F1738D2BB00825BAD /* ascii.html */,
-				54ABD5101738D2BB00825BAD /* jijicom.html */,
-				54ABD5111738D2BB00825BAD /* mingpao.html */,
-				54ABD5121738D2BB00825BAD /* moe.html */,
-				54ABD5131738D2BB00825BAD /* theverge.html */,
-				54ABD5141738D2BB00825BAD /* yomiuri.html */,
+				54ABD5251738DBF300825BAD /* ascii.html */,
+				54ABD5261738DBF300825BAD /* jijicom.html */,
+				54ABD5271738DBF300825BAD /* mingpao.html */,
+				54ABD5281738DBF300825BAD /* moe.html */,
+				54ABD5291738DBF300825BAD /* theverge.html */,
+				54ABD52A1738DBF300825BAD /* yomiuri.html */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -213,9 +214,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		54ABD3EF1738CA6E00825BAD /* IGAutoUnicode */ = {
+		54ABD3EF1738CA6E00825BAD /* IGAutoString */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54ABD4151738CA6F00825BAD /* Build configuration list for PBXNativeTarget "IGAutoUnicode" */;
+			buildConfigurationList = 54ABD4151738CA6F00825BAD /* Build configuration list for PBXNativeTarget "IGAutoString" */;
 			buildPhases = (
 				54ABD3EC1738CA6E00825BAD /* Sources */,
 				54ABD3ED1738CA6E00825BAD /* Frameworks */,
@@ -226,14 +227,14 @@
 			dependencies = (
 				54ABD5021738D11B00825BAD /* PBXTargetDependency */,
 			);
-			name = IGAutoUnicode;
+			name = IGAutoString;
 			productName = IGAutoUnicode;
-			productReference = 54ABD3F01738CA6E00825BAD /* libIGAutoUnicode.a */;
+			productReference = 54ABD3F01738CA6E00825BAD /* libIGAutoString.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		54ABD4001738CA6F00825BAD /* IGAutoUnicodeTests */ = {
+		54ABD4001738CA6F00825BAD /* IGAutoStringTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54ABD4181738CA6F00825BAD /* Build configuration list for PBXNativeTarget "IGAutoUnicodeTests" */;
+			buildConfigurationList = 54ABD4181738CA6F00825BAD /* Build configuration list for PBXNativeTarget "IGAutoStringTests" */;
 			buildPhases = (
 				54ABD3FC1738CA6F00825BAD /* Sources */,
 				54ABD3FD1738CA6F00825BAD /* Frameworks */,
@@ -245,9 +246,9 @@
 			dependencies = (
 				54ABD4081738CA6F00825BAD /* PBXTargetDependency */,
 			);
-			name = IGAutoUnicodeTests;
+			name = IGAutoStringTests;
 			productName = IGAutoUnicodeTests;
-			productReference = 54ABD4011738CA6F00825BAD /* IGAutoUnicodeTests.octest */;
+			productReference = 54ABD4011738CA6F00825BAD /* IGAutoStringTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -259,7 +260,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Ignition Soft";
 			};
-			buildConfigurationList = 54ABD3EB1738CA6E00825BAD /* Build configuration list for PBXProject "IGAutoUnicode" */;
+			buildConfigurationList = 54ABD3EB1738CA6E00825BAD /* Build configuration list for PBXProject "IGAutoString" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -277,8 +278,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				54ABD3EF1738CA6E00825BAD /* IGAutoUnicode */,
-				54ABD4001738CA6F00825BAD /* IGAutoUnicodeTests */,
+				54ABD3EF1738CA6E00825BAD /* IGAutoString */,
+				54ABD4001738CA6F00825BAD /* IGAutoStringTests */,
 			);
 		};
 /* End PBXProject section */
@@ -305,13 +306,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54ABD40F1738CA6F00825BAD /* InfoPlist.strings in Resources */,
-				54ABD5151738D2BB00825BAD /* ascii.html in Resources */,
-				54ABD5161738D2BB00825BAD /* jijicom.html in Resources */,
-				54ABD5171738D2BB00825BAD /* mingpao.html in Resources */,
-				54ABD5181738D2BB00825BAD /* moe.html in Resources */,
-				54ABD5191738D2BB00825BAD /* theverge.html in Resources */,
-				54ABD51A1738D2BB00825BAD /* yomiuri.html in Resources */,
+				54ABD52B1738DBF300825BAD /* ascii.html in Resources */,
+				54ABD52C1738DBF300825BAD /* jijicom.html in Resources */,
+				54ABD52D1738DBF300825BAD /* mingpao.html in Resources */,
+				54ABD52E1738DBF300825BAD /* moe.html in Resources */,
+				54ABD52F1738DBF300825BAD /* theverge.html in Resources */,
+				54ABD5301738DBF300825BAD /* yomiuri.html in Resources */,
+				54ABD5341738DC0400825BAD /* InfoPlist.strings in Resources */,
+				54ABD5361738DC0900825BAD /* IGAutoStringTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54ABD3FB1738CA6F00825BAD /* IGAutoUnicode.m in Sources */,
+				54ABD5201738DBCF00825BAD /* IGAutoString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,8 +348,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54ABD4121738CA6F00825BAD /* IGAutoUnicodeTests.m in Sources */,
-				54ABD4F31738D00200825BAD /* IGAutoUnicode.m in Sources */,
+				54ABD5211738DBCF00825BAD /* IGAutoString.m in Sources */,
+				54ABD5241738DBEA00825BAD /* IGAutoStringTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +358,7 @@
 /* Begin PBXTargetDependency section */
 		54ABD4081738CA6F00825BAD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 54ABD3EF1738CA6E00825BAD /* IGAutoUnicode */;
+			target = 54ABD3EF1738CA6E00825BAD /* IGAutoString */;
 			targetProxy = 54ABD4071738CA6F00825BAD /* PBXContainerItemProxy */;
 		};
 		54ABD5021738D11B00825BAD /* PBXTargetDependency */ = {
@@ -367,10 +369,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		54ABD40D1738CA6F00825BAD /* InfoPlist.strings */ = {
+		54ABD5321738DC0400825BAD /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				54ABD40E1738CA6F00825BAD /* en */,
+				54ABD5331738DC0400825BAD /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -436,13 +438,13 @@
 			buildSettings = {
 				DSTROOT = /tmp/IGAutoUnicode.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IGAutoUnicode/IGAutoUnicode-Prefix.pch";
+				GCC_PREFIX_HEADER = "IGAutoUnicode/IGAutoString-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					External/UniversalDetector/UniversalDetector,
 					External/UniversalDetector/external/uchardet/src,
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = IGAutoString;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -452,13 +454,13 @@
 			buildSettings = {
 				DSTROOT = /tmp/IGAutoUnicode.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IGAutoUnicode/IGAutoUnicode-Prefix.pch";
+				GCC_PREFIX_HEADER = "IGAutoUnicode/IGAutoString-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					External/UniversalDetector/UniversalDetector,
 					External/UniversalDetector/external/uchardet/src,
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = IGAutoString;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -476,8 +478,8 @@
 					External/UniversalDetector/UniversalDetector,
 					External/UniversalDetector/external/uchardet/src,
 				);
-				INFOPLIST_FILE = "IGAutoUnicodeTests/IGAutoUnicodeTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "IGAutoUnicodeTests/IGAutoStringTests-Info.plist";
+				PRODUCT_NAME = IGAutoStringTests;
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -496,8 +498,8 @@
 					External/UniversalDetector/UniversalDetector,
 					External/UniversalDetector/external/uchardet/src,
 				);
-				INFOPLIST_FILE = "IGAutoUnicodeTests/IGAutoUnicodeTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "IGAutoUnicodeTests/IGAutoStringTests-Info.plist";
+				PRODUCT_NAME = IGAutoStringTests;
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -506,7 +508,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		54ABD3EB1738CA6E00825BAD /* Build configuration list for PBXProject "IGAutoUnicode" */ = {
+		54ABD3EB1738CA6E00825BAD /* Build configuration list for PBXProject "IGAutoString" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54ABD4131738CA6F00825BAD /* Debug */,
@@ -515,7 +517,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54ABD4151738CA6F00825BAD /* Build configuration list for PBXNativeTarget "IGAutoUnicode" */ = {
+		54ABD4151738CA6F00825BAD /* Build configuration list for PBXNativeTarget "IGAutoString" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54ABD4161738CA6F00825BAD /* Debug */,
@@ -524,7 +526,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54ABD4181738CA6F00825BAD /* Build configuration list for PBXNativeTarget "IGAutoUnicodeTests" */ = {
+		54ABD4181738CA6F00825BAD /* Build configuration list for PBXNativeTarget "IGAutoStringTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54ABD4191738CA6F00825BAD /* Debug */,

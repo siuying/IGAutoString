@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "54ABD3EF1738CA6E00825BAD"
-               BuildableName = "libIGAutoUnicode.a"
-               BlueprintName = "IGAutoUnicode"
-               ReferencedContainer = "container:IGAutoUnicode.xcodeproj">
+               BuildableName = "libIGAutoString.a"
+               BlueprintName = "IGAutoString"
+               ReferencedContainer = "container:IGAutoString.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "54ABD4001738CA6F00825BAD"
-               BuildableName = "IGAutoUnicodeTests.octest"
-               BlueprintName = "IGAutoUnicodeTests"
-               ReferencedContainer = "container:IGAutoUnicode.xcodeproj">
+               BuildableName = "IGAutoStringTests.octest"
+               BlueprintName = "IGAutoStringTests"
+               ReferencedContainer = "container:IGAutoString.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

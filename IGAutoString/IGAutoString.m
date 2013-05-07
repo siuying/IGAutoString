@@ -1,15 +1,15 @@
 //
-//  IGAutoUnicode.m
+//  IGAutoString.m
 //  IGAutoUnicode
 //
 //  Created by Francis Chong on 7/5/13.
 //  Copyright (c) 2013 Ignition Soft. All rights reserved.
 //
 
-#import "IGAutoUnicode.h"
+#import "IGAutoString.h"
 #import "UniversalDetector.h"
 
-@implementation IGAutoUnicode
+@implementation IGAutoString
 
 -(id) init {
     self = [super init];
@@ -54,7 +54,7 @@
 }
 
 +(NSString*) stringWithData:(NSData*)data {
-    return [[[IGAutoUnicode alloc] init] stringWithData:data];
+    return [[[IGAutoString alloc] init] stringWithData:data];
 }
 
 @end
