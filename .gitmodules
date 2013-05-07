@@ -1,0 +1,3 @@
+[submodule "External/UniversalDetector"]
+	path = External/UniversalDetector
+	url = git@github.com:siuying/UniversalDetector.git
