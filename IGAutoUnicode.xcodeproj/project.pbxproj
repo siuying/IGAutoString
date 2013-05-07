@@ -13,9 +13,19 @@
 		54ABD4031738CA6F00825BAD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD4021738CA6F00825BAD /* SenTestingKit.framework */; };
 		54ABD4051738CA6F00825BAD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD4041738CA6F00825BAD /* UIKit.framework */; };
 		54ABD4061738CA6F00825BAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD3F31738CA6E00825BAD /* Foundation.framework */; };
-		54ABD4091738CA6F00825BAD /* libIGAutoUnicode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD3F01738CA6E00825BAD /* libIGAutoUnicode.a */; };
 		54ABD40F1738CA6F00825BAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD40D1738CA6F00825BAD /* InfoPlist.strings */; };
 		54ABD4121738CA6F00825BAD /* IGAutoUnicodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54ABD4111738CA6F00825BAD /* IGAutoUnicodeTests.m */; };
+		54ABD4F31738D00200825BAD /* IGAutoUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 54ABD3FA1738CA6F00825BAD /* IGAutoUnicode.m */; };
+		54ABD50A1738D1E700825BAD /* libUniversalDetector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD4FE1738D0FF00825BAD /* libUniversalDetector.a */; };
+		54ABD50B1738D1EF00825BAD /* libUniversalDetector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD4FE1738D0FF00825BAD /* libUniversalDetector.a */; };
+		54ABD50D1738D20200825BAD /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD50C1738D20200825BAD /* libc++.dylib */; };
+		54ABD50E1738D20C00825BAD /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD50C1738D20200825BAD /* libc++.dylib */; };
+		54ABD5151738D2BB00825BAD /* ascii.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD50F1738D2BB00825BAD /* ascii.html */; };
+		54ABD5161738D2BB00825BAD /* jijicom.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD5101738D2BB00825BAD /* jijicom.html */; };
+		54ABD5171738D2BB00825BAD /* mingpao.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD5111738D2BB00825BAD /* mingpao.html */; };
+		54ABD5181738D2BB00825BAD /* moe.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD5121738D2BB00825BAD /* moe.html */; };
+		54ABD5191738D2BB00825BAD /* theverge.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD5131738D2BB00825BAD /* theverge.html */; };
+		54ABD51A1738D2BB00825BAD /* yomiuri.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD5141738D2BB00825BAD /* yomiuri.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +35,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 54ABD3EF1738CA6E00825BAD;
 			remoteInfo = IGAutoUnicode;
+		};
+		54ABD4FD1738D0FF00825BAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54ABD4F81738D0FF00825BAD /* UniversalDetector.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 54ABD31A1738AE2300825BAD;
+			remoteInfo = UniversalDetector;
+		};
+		54ABD4FF1738D0FF00825BAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54ABD4F81738D0FF00825BAD /* UniversalDetector.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 54ABD36B1738AF9500825BAD;
+			remoteInfo = UniversalDetectorTest;
+		};
+		54ABD5011738D11B00825BAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54ABD4F81738D0FF00825BAD /* UniversalDetector.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 54ABD3191738AE2300825BAD;
+			remoteInfo = UniversalDetector;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -52,8 +83,15 @@
 		54ABD4041738CA6F00825BAD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		54ABD40C1738CA6F00825BAD /* IGAutoUnicodeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IGAutoUnicodeTests-Info.plist"; sourceTree = "<group>"; };
 		54ABD40E1738CA6F00825BAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		54ABD4101738CA6F00825BAD /* IGAutoUnicodeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGAutoUnicodeTests.h; sourceTree = "<group>"; };
 		54ABD4111738CA6F00825BAD /* IGAutoUnicodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGAutoUnicodeTests.m; sourceTree = "<group>"; };
+		54ABD4F81738D0FF00825BAD /* UniversalDetector.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UniversalDetector.xcodeproj; path = External/UniversalDetector/UniversalDetector.xcodeproj; sourceTree = "<group>"; };
+		54ABD50C1738D20200825BAD /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		54ABD50F1738D2BB00825BAD /* ascii.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ascii.html; sourceTree = "<group>"; };
+		54ABD5101738D2BB00825BAD /* jijicom.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jijicom.html; sourceTree = "<group>"; };
+		54ABD5111738D2BB00825BAD /* mingpao.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mingpao.html; sourceTree = "<group>"; };
+		54ABD5121738D2BB00825BAD /* moe.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = moe.html; sourceTree = "<group>"; };
+		54ABD5131738D2BB00825BAD /* theverge.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = theverge.html; sourceTree = "<group>"; };
+		54ABD5141738D2BB00825BAD /* yomiuri.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yomiuri.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +99,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54ABD50A1738D1E700825BAD /* libUniversalDetector.a in Frameworks */,
 				54ABD3F41738CA6E00825BAD /* Foundation.framework in Frameworks */,
+				54ABD50E1738D20C00825BAD /* libc++.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,10 +109,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54ABD50D1738D20200825BAD /* libc++.dylib in Frameworks */,
+				54ABD50B1738D1EF00825BAD /* libUniversalDetector.a in Frameworks */,
 				54ABD4031738CA6F00825BAD /* SenTestingKit.framework in Frameworks */,
 				54ABD4051738CA6F00825BAD /* UIKit.framework in Frameworks */,
 				54ABD4061738CA6F00825BAD /* Foundation.framework in Frameworks */,
-				54ABD4091738CA6F00825BAD /* libIGAutoUnicode.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +142,8 @@
 		54ABD3F21738CA6E00825BAD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				54ABD50C1738D20200825BAD /* libc++.dylib */,
+				54ABD4F81738D0FF00825BAD /* UniversalDetector.xcodeproj */,
 				54ABD3F31738CA6E00825BAD /* Foundation.framework */,
 				54ABD4021738CA6F00825BAD /* SenTestingKit.framework */,
 				54ABD4041738CA6F00825BAD /* UIKit.framework */,
@@ -129,7 +172,7 @@
 		54ABD40A1738CA6F00825BAD /* IGAutoUnicodeTests */ = {
 			isa = PBXGroup;
 			children = (
-				54ABD4101738CA6F00825BAD /* IGAutoUnicodeTests.h */,
+				54ABD4EE1738CEC500825BAD /* Fixtures */,
 				54ABD4111738CA6F00825BAD /* IGAutoUnicodeTests.m */,
 				54ABD40B1738CA6F00825BAD /* Supporting Files */,
 			);
@@ -143,6 +186,28 @@
 				54ABD40D1738CA6F00825BAD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		54ABD4EE1738CEC500825BAD /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				54ABD50F1738D2BB00825BAD /* ascii.html */,
+				54ABD5101738D2BB00825BAD /* jijicom.html */,
+				54ABD5111738D2BB00825BAD /* mingpao.html */,
+				54ABD5121738D2BB00825BAD /* moe.html */,
+				54ABD5131738D2BB00825BAD /* theverge.html */,
+				54ABD5141738D2BB00825BAD /* yomiuri.html */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		54ABD4F91738D0FF00825BAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54ABD4FE1738D0FF00825BAD /* libUniversalDetector.a */,
+				54ABD5001738D0FF00825BAD /* UniversalDetectorTest.octest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +224,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				54ABD5021738D11B00825BAD /* PBXTargetDependency */,
 			);
 			name = IGAutoUnicode;
 			productName = IGAutoUnicode;
@@ -203,6 +269,12 @@
 			mainGroup = 54ABD3E71738CA6E00825BAD;
 			productRefGroup = 54ABD3F11738CA6E00825BAD /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 54ABD4F91738D0FF00825BAD /* Products */;
+					ProjectRef = 54ABD4F81738D0FF00825BAD /* UniversalDetector.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				54ABD3EF1738CA6E00825BAD /* IGAutoUnicode */,
@@ -211,12 +283,35 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		54ABD4FE1738D0FF00825BAD /* libUniversalDetector.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUniversalDetector.a;
+			remoteRef = 54ABD4FD1738D0FF00825BAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		54ABD5001738D0FF00825BAD /* UniversalDetectorTest.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UniversalDetectorTest.octest;
+			remoteRef = 54ABD4FF1738D0FF00825BAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		54ABD3FE1738CA6F00825BAD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				54ABD40F1738CA6F00825BAD /* InfoPlist.strings in Resources */,
+				54ABD5151738D2BB00825BAD /* ascii.html in Resources */,
+				54ABD5161738D2BB00825BAD /* jijicom.html in Resources */,
+				54ABD5171738D2BB00825BAD /* mingpao.html in Resources */,
+				54ABD5181738D2BB00825BAD /* moe.html in Resources */,
+				54ABD5191738D2BB00825BAD /* theverge.html in Resources */,
+				54ABD51A1738D2BB00825BAD /* yomiuri.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54ABD4121738CA6F00825BAD /* IGAutoUnicodeTests.m in Sources */,
+				54ABD4F31738D00200825BAD /* IGAutoUnicode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +358,11 @@
 			isa = PBXTargetDependency;
 			target = 54ABD3EF1738CA6E00825BAD /* IGAutoUnicode */;
 			targetProxy = 54ABD4071738CA6F00825BAD /* PBXContainerItemProxy */;
+		};
+		54ABD5021738D11B00825BAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UniversalDetector;
+			targetProxy = 54ABD5011738D11B00825BAD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -336,6 +437,10 @@
 				DSTROOT = /tmp/IGAutoUnicode.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IGAutoUnicode/IGAutoUnicode-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					External/UniversalDetector/UniversalDetector,
+					External/UniversalDetector/external/uchardet/src,
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -348,6 +453,10 @@
 				DSTROOT = /tmp/IGAutoUnicode.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IGAutoUnicode/IGAutoUnicode-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					External/UniversalDetector/UniversalDetector,
+					External/UniversalDetector/external/uchardet/src,
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -363,8 +472,13 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IGAutoUnicode/IGAutoUnicode-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					External/UniversalDetector/UniversalDetector,
+					External/UniversalDetector/external/uchardet/src,
+				);
 				INFOPLIST_FILE = "IGAutoUnicodeTests/IGAutoUnicodeTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -378,8 +492,13 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IGAutoUnicode/IGAutoUnicode-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					External/UniversalDetector/UniversalDetector,
+					External/UniversalDetector/external/uchardet/src,
+				);
 				INFOPLIST_FILE = "IGAutoUnicodeTests/IGAutoUnicodeTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -403,6 +522,7 @@
 				54ABD4171738CA6F00825BAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		54ABD4181738CA6F00825BAD /* Build configuration list for PBXNativeTarget "IGAutoUnicodeTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +531,7 @@
 				54ABD41A1738CA6F00825BAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

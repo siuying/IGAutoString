@@ -1,0 +1,360 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=big5" />
+<base href="http://dict.revised.moe.edu.tw/" />
+<link type="text/css" rel="stylesheet" href="dict.css" />
+<title>教育部重編國語辭典修訂本</title>
+<script language = "javascript"><!--
+function setMenu(url, width, height) {
+   var  menuWin = self.menuWin;
+   if(menuWin == null || menuWin.closed) {
+      // alwaysRaised=1,status=no,menubar=no,toolbar=no
+      menuWin = self.open("", "menuWin", "width=300,height=500,scrollbars,resizable,dependent");
+      if(menuWin == null)  { alert('無法開啟視窗');  return; }
+   }
+// menuWin.moveTo(e.screenX, top.frames[0].innerHeight+e.screenY-e.pageY+5);
+   if(width != null)  menuWin.resizeTo(width, height);
+
+   menuWin.location.href = url;
+   menuWin.focus();
+}
+
+function setPartMenu() {
+   var elem = document.form1.imgFont;
+//   var s = "/newDict/dict/" +
+     var s = "/" +
+       ((elem.type == "hidden" ? elem.value == 1 : elem.checked)
+       ? "part1.html" : "part.html");
+   setMenu(s, 620, 400);
+}
+
+function pron(pr) {
+   var elem = document.form1.cond;
+   elem.focus();
+   elem.value += pr;
+}
+
+function search() {
+   if(document.form1.cond.value == "")
+      window.alert("未設查詢條件");
+   else {
+         if(document.getElementById('op') != null)  document.form1.op.value=""; 
+         document.form1.submit();
+   }
+}
+
+function keyPress() {
+   x = event.keyCode; 
+   if ( x == 13 ) {
+     search();
+     event.keyCode = 0;
+     event.returnValue = false; 
+   }
+}
+
+function toChar(ch) {
+   var f = document.forms[0], s, elem;
+
+   if(ch.length == 4) { 
+      ch = ch.toUpperCase();
+      ch = '%' + ch.substr(0, 2) + '%' + ch.substr(2, 2);
+      elem = f.imgFont;
+      s = "/cgi-bin/newDict/dict.sh?cond=^" + ch + "$&fld=1" +
+	  "&pieceLen=" + f.pieceLen.options[f.pieceLen.selectedIndex].value +
+	  "&imgFont=" + (elem.type == "hidden" ? elem.value :
+	     (elem.checked ? "1" : "0"));
+      if(f.ukey != null)
+	 s += "&ukey=" + f.ukey.value + "&serial=" + f.serial.value;
+      location.href = s;
+   }
+   else {
+      f.cond.value = '^' + ch + '$';
+      f.fld[0].checked = true;
+      f.submit();
+   }
+   focus();
+}
+
+/*
+browserName = navigator.appName;
+browserVer = parseInt(navigator.appVersion);
+if(browserName == "Netscape" && browserVer >= 3 ||
+   browserName == "Microsoft Internet Explorer" && browserVer >= 4)
+   version = "n3";
+else  version = "n2";
+*/
+//--></script>
+</head>
+
+<body background="images/bk016.gif" topMargin="0"
+   onLoad="document.form1.cond.focus()"
+   onUnload="if((win = self.menuWin) != null && !win.closed) win.close()">
+<center>
+<img src="images/dict-title.gif" />
+<form name="form1" action="/cgi-bin/newDict/dict.sh" method="get">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+  <td align="center" class="text">
+<!--
+    我想找 <input name="cond" size="20" maxlength="400" onKeyPress="javascript:search()"> 
+-->
+    <br/>我想找 <input name="cond" size="20" maxlength="400" onKeyPress="javascript:keyPress()">
+    <a href="javascript:search()"><img src="images/go.gif" 
+       alt="檢索" align="absMiddle" border="0"></a>
+
+    (<input type="checkbox" name="syn" value="1" />含異體字)　
+    每頁 <select name="pieceLen">
+      <option value="50" selected>50</option>
+      <option value="100">100</option>
+      <option value="20">20</option>
+      <option value="10">10</option>
+    </select> 筆<br /><br />　
+    <input type="radio" name="fld" value="1" checked />字詞
+    <input type="radio" name="fld" value="3" />注音
+    <input type="radio" name="fld" value="6" />釋義
+    <input type="radio" name="fld" value="1,4,5,6" />全部　
+    <br />
+    <br />
+
+    分類 <select name="cat" class="text">　　 
+      <option></option>
+      <option value="1000">成語(3011)</option>
+      <option value="2000">諺語(893)</option>
+      <option value="3000">歇後語(323)</option>
+      <option value="4000">外來語</option>
+      <option value="4100">　音譯(482)</option>
+      <option value="4200">　義譯(115)</option>
+      <option value="4300">　音義合譯(46)</option>
+      <option value="4400">　無法考證者(67)</option>
+      <option value="5000">專科語詞</option>
+      <option value="5100">　國家、朝代、人名</option>
+      <option value="5101">　　國名(519)</option>
+      <option value="5102">　　朝代名(87)</option>
+      <option value="5103">　　人名(2182)</option>
+      <option value="5104">　　帝號(78)</option>
+      <option value="5200">　天文星象</option>
+      <option value="5201">　　星名(118)</option>
+      <option value="5202">　　星座名(89)</option>
+      <option value="5203">　　術數用語(54)</option>
+      <option value="5300">　文學技藝</option>
+      <option value="5301">　　書名(775)</option>
+      <option value="5302">　　書體名(25)</option>
+      <option value="5303">　　文章名(50)</option>
+      <option value="5304">　　文體名(68)</option>
+      <option value="5305">　　敦煌變文名(2)</option>
+      <option value="5306">　　詩名(48)</option>
+      <option value="5307">　　詞牌名(32)</option>
+      <option value="5308">　　曲牌名(25)</option>
+      <option value="5309">　　樂曲名(90)</option>
+      <option value="5310">　　樂器名(241)</option>
+      <option value="5311">　　戲劇曲藝(205)</option>
+      <option value="5312">　　雜劇(26)</option>
+      <option value="5313">　　傳奇(36)</option>
+      <option value="5400">　地方行政</option>
+      <option value="5401">　　地名(608)</option>
+      <option value="5402">　　州名(49)</option>
+      <option value="5403">　　省名(48)</option>
+      <option value="5404">　　城市名(398)</option>
+      <option value="5405">　　縣名(387)</option>
+      <option value="5406">　　鄉鎮名(134)</option>
+      <option value="5407">　　郡名(25)</option>
+      <option value="5500">　地理類</option>
+      <option value="5501">　　島名(73)</option>
+      <option value="5502">　　半島名(29)</option>
+      <option value="5503">　　群島名(47)</option>
+      <option value="5504">　　方位名(15)</option>
+      <option value="5505">　　山名(257)</option>
+      <option value="5506">　　山脈名(51)</option>
+      <option value="5507">　　山峰名(12)</option>
+      <option value="5508">　　河川名(323)</option>
+      <option value="5509">　　湖泊名(75)</option>
+      <option value="5510">　　海洋名(27)</option>
+      <option value="5511">　　海峽名(18)</option>
+      <option value="5512">　　海灣名(22)</option>
+      <option value="5513">　　運河名(9)</option>
+      <option value="5514">　　水庫名(4)</option>
+      <option value="5600">　生物類</option>
+      <option value="5601">　　動物名(1054)</option>
+      <option value="5602">　　植物名(1302)</option>
+      <option value="5603">　　微生物(32)</option>
+      <option value="5700">　其他</option>
+      <option value="5701">　　職官名(566)</option>
+      <option value="5702">　　武器名(126)</option>
+      <option value="5703">　　稱謂(506)</option>
+      <option value="5704">　　病名(328)</option>
+      <option value="5705">　　神話(202)</option>
+      <option value="5706">　　方言(599)</option>
+      <option value="5707">　　宗教(290)</option>
+      <option value="5708">　　舞曲舞蹈(35)</option>
+      <option value="5709">　　球類(142)</option>
+      <option value="5710">　　種族、民族(147)</option>
+      <option value="5711">　　股票術語(96)</option>
+      <option value="5712">　　大陸用語(630)</option>
+      <option value="5713">　　量詞(437)</option>
+      <option value="5714">　　節氣(34)</option>
+      <option value="5715">　　節日(29)</option>
+    </select>　　　　
+    <a href="javascript:setPartMenu()">部首表</a>
+  </td>
+</tr>
+</table>
+<p> </p>
+<table align="center" bgcolor="lightskyblue" border="1" bordercolordark="#ffffff" bordercolorlight="#c0c0c0"> 
+   <tr align="center" valign="middle">
+     <td><a href="javascript:pron('ˊ')" class="key2">ˊ</a></td>
+     <td><a href="javascript:pron('ㄦ')" class="key1">ㄦ</a></td>
+     <td><a href="javascript:pron('ㄢ')" class="key1">ㄢ</a></td>
+     <td><a href="javascript:pron('ㄞ')" class="key1">ㄞ</a></td>
+     <td><a href="javascript:pron('ㄚ')" class="key1">ㄚ</a></td>
+     <td><a href="javascript:pron('ㄧ')" class="key">ㄧ</a></td> 
+     <td><a href="javascript:pron('ㄗ')" class="key3">ㄗ</a></td> 
+     <td><a href="javascript:pron('ㄓ')" class="key3">ㄓ</a></td>
+     <td><a href="javascript:pron('ㄐ')" class="key3">ㄐ</a></td>
+     <td><a href="javascript:pron('ㄍ')" class="key3">ㄍ</a></td>
+     <td><a href="javascript:pron('ㄉ')" class="key3">ㄉ</a></td>
+     <td><a href="javascript:pron('ㄅ')" class="key3">ㄅ</a></td>
+   </tr>
+   <tr align="center" valign="middle">
+     <td><a href="javascript:pron('ˇ')" class="key2">ˇ</a></td>
+     <td>　</td>
+     <td><a href="javascript:pron('ㄣ')" class="key1">ㄣ</a></td>
+     <td><a href="javascript:pron('ㄟ')" class="key1">ㄟ</a></td>
+     <td><a href="javascript:pron('ㄛ')" class="key1">ㄛ</a></td>
+     <td><a href="javascript:pron('ㄨ')" class="key">ㄨ</a></td>
+     <td><a href="javascript:pron('ㄘ')" class="key3">ㄘ</a></td>
+     <td><a href="javascript:pron('ㄔ')" class="key3">ㄔ</a></td>
+     <td><a href="javascript:pron('ㄑ')" class="key3">ㄑ</a></td>
+     <td><a href="javascript:pron('ㄎ')" class="key3">ㄎ</a></td>
+     <td><a href="javascript:pron('ㄊ')" class="key3">ㄊ</a></td>
+     <td><a href="javascript:pron('ㄆ')" class="key3">ㄆ</a></td>
+   </tr>
+   <tr align="center" valign="middle">
+     <td><a href="javascript:pron('ˋ')" class="key2">ˋ</a></td>
+     
+     <td>　</td>
+     <td><a href="javascript:pron('ㄤ')" class="key1">ㄤ</a></td>
+     <td><a href="javascript:pron('ㄠ')" class="key1">ㄠ</a></td>
+     <td><a href="javascript:pron('ㄜ')" class="key1">ㄜ</a></td>
+     <td><a href="javascript:pron('ㄩ')" class="key">ㄩ</a></td>
+     <td><a href="javascript:pron('ㄙ')" class="key3">ㄙ</a></td>
+     <td><a href="javascript:pron('ㄕ')" class="key3">ㄕ</a></td>
+     <td><a href="javascript:pron('ㄒ')" class="key3">ㄒ</a></td>
+     <td><a href="javascript:pron('ㄏ')" class="key3">ㄏ</a></td>
+     <td><a href="javascript:pron('ㄋ')" class="key3">ㄋ</a></td>
+     <td><a href="javascript:pron('ㄇ')" class="key3">ㄇ</a></td>
+   </tr>
+   <tr align="center" valign="middle">
+     <td><a href="javascript:pron('˙')" class="key2">˙</a></td>
+     <td>　</td>
+     <td><a href="javascript:pron('ㄥ')" class="key1">ㄥ</a></td>
+     <td><a href="javascript:pron('ㄡ')" class="key1">ㄡ</a></td>
+     <td><a href="javascript:pron('ㄝ')" class="key1">ㄝ</a></td>
+     <td>　</td>
+     <td>　</td>
+     <td><a href="javascript:pron('ㄖ')" class="key3">ㄖ</a></td>
+     <td>　</td>
+     <td>　</td>
+     <td><a href="javascript:pron('ㄌ')" class="key3">ㄌ</a></td>
+     <td><a href="javascript:pron('ㄈ')" class="key3">ㄈ</a></td>
+   </tr>
+   </table>
+<input type="hidden" name="ukey" value="494733387">
+<input type="hidden" name="serial" value="1">
+<input type="hidden" name="recNo" value="1">
+<input type="hidden" name="op" value="">
+<input type="hidden" name="imgFont" value="1">
+</form>
+<script language="javascript">
+function expand_char_references( str ) {
+   var CHAR_REF_REGEX = /&#(\d{1,7});/g;
+   var rtn = "";
+   var hit;
+   var last_ref_end = 0;
+   while( (hit = CHAR_REF_REGEX.exec( str )) != null ) {
+      var charcode = new Number( hit[1] );
+      rtn += str.substring( last_ref_end , hit.index ) + String.fromCharCode( charcode );
+      last_ref_end = hit.index + hit[0].length;
+   }
+   rtn += str.substring( last_ref_end );
+   return rtn;
+}
+
+function setSel(sel, val) {
+   var  i;
+   for(i = 0; i < sel.length; i++)
+      if(sel.options[i].value == val) {
+         sel.selectedIndex = i;
+         break;
+      }
+}
+
+function setRd(rd, val) {
+   var  i;
+   for(i = 0; i < rd.length; i++)
+      if(rd[i].value == val) {
+         rd[i].click();
+         break;
+      }
+}
+
+function fetch(recNo) {
+   var f = document.form1;
+
+   f.recNo.value = recNo;
+   f.op.value = 'f';
+   f.submit();
+}
+
+var f = document.form1;
+f.cond.value = expand_char_references("萌");
+setSel(f.pieceLen, 50);
+setSel(f.cat, 0);
+setRd(f.fld, "1");
+</script>
+<script language="javascript">
+function list(recNo) {
+   var f = document.form1;
+
+   f.recNo.value = recNo - recNo % f.pieceLen.options[f.pieceLen.selectedIndex].value;
+   f.op.value = 'l';
+   f.submit();
+}
+</script>
+<table width="90%" border="1" cellspacing="1" cellpadding="1">
+  <tr>
+    <td colspan="2">&nbsp;2.　<span class="key">萌</span>　　<span class="lable">部首</span>　艸　<span class="lable">部首外筆畫</span>　8　<span class="lable">總筆畫</span>　12</td>
+  </tr>
+  <tr>
+    <td colspan="2" width="100%">&nbsp;<span class="lable">注音一式</span>　ㄇㄥˊ</td></tr><tr>
+    <td width="50%">&nbsp;<span class="lable">漢語拼音</span>　ｍ<img src="images/fe6d.jpg" border="0" />&nbsp;ｎ<img src="images/9ce4.jpg" border="0" />&nbsp;</td>
+</td>
+    <td width="50%">&nbsp;<span class="lable">注音二式</span>　ｍ<img src="images/fe6d.jpg" border="0" />&nbsp;ｎｇ</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <table border="0" valign="top">
+<tr><td><img src="images/fed3.jpg" border="0"/></td></tr>
+<tr><td></td><td valign=top><img src="images/fe59.jpg" border="0"/></td><td>草木初生的芽。說文解字：「<span class="key">萌</span>，艸芽也。」唐˙韓愈﹑劉師服﹑侯喜﹑軒轅彌明˙石鼎聯句：「秋瓜未落蒂，凍芋強抽<span class="key">萌</span>。」</td></tr>
+<tr><td></td><td valign=top><img src="images/fe5a.jpg" border="0"/></td><td>事物發生的開端或徵兆。韓非子˙說林上：「聖人見微以知<span class="key">萌</span>，見端以知末。」漢˙蔡邕˙對詔問<img src="images/9264.jpg" border="0"/>異八事：「以杜漸防<span class="key">萌</span>，則其救也。」</td></tr>
+<tr><td></td><td valign=top><img src="images/fe5b.jpg" border="0"/></td><td>人民。通「氓」。如：「<span class="key">萌</span>黎」﹑「<span class="key">萌</span>隸」。</td></tr>
+<tr><td></td><td valign=top><img src="images/fe5c.jpg" border="0"/></td><td>姓。如五代時蜀有<span class="key">萌</span>慮。</td></tr>
+<tr><td><img src="images/fed4.jpg" border="0"/></td></tr>
+<tr><td></td><td valign=top><img src="images/fe59.jpg" border="0"/></td><td>發芽。如：「<span class="key">萌</span>芽」。楚辭˙王逸˙九思˙傷時：「明風習習兮龢暖，百草<span class="key">萌</span>兮華榮。」</td></tr>
+<tr><td></td><td valign=top><img src="images/fe5a.jpg" border="0"/></td><td>發生。如：「故態復<span class="key">萌</span>」。管子˙牧民：「惟有道者，能備患於未形也，故禍不<span class="key">萌</span>。」三國演義˙第一回：「若<span class="key">萌</span>異心，必獲惡報。」</td></tr>
+<tr></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<p class="ln">
+<a href="index.html">至首頁</a>
+　<a href="javascript:list(1)">至目錄</a>
+　<a href="javascript:fetch(0)">上一則</a>
+　<a href="javascript:fetch(2)">下一則</a>
+</p>
+<p class="cp">
+中華民國教育部　版權所有　(c) 1994 Ministry of Education, R.O.C. All rights reserved.
+</p><p/>
+</center>
+</body>
+</html>
