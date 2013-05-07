@@ -26,6 +26,9 @@
 		54ABD5301738DBF300825BAD /* yomiuri.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD52A1738DBF300825BAD /* yomiuri.html */; };
 		54ABD5341738DC0400825BAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD5321738DC0400825BAD /* InfoPlist.strings */; };
 		54ABD5361738DC0900825BAD /* IGAutoStringTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD5351738DC0900825BAD /* IGAutoStringTests-Info.plist */; };
+		54ABD54E17390A1200825BAD /* 2ch.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD54D17390A1200825BAD /* 2ch.html */; };
+		54ABD55117390CC800825BAD /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD55017390CC800825BAD /* libiconv.dylib */; };
+		54ABD552173912E400825BAD /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD55017390CC800825BAD /* libiconv.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,8 @@
 		54ABD52A1738DBF300825BAD /* yomiuri.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = yomiuri.html; path = IGAutoStringTests/Fixtures/yomiuri.html; sourceTree = SOURCE_ROOT; };
 		54ABD5331738DC0400825BAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = IGAutoStringTests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		54ABD5351738DC0900825BAD /* IGAutoStringTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "IGAutoStringTests-Info.plist"; path = "IGAutoStringTests/IGAutoStringTests-Info.plist"; sourceTree = SOURCE_ROOT; };
+		54ABD54D17390A1200825BAD /* 2ch.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = 2ch.html; path = IGAutoStringTests/Fixtures/2ch.html; sourceTree = SOURCE_ROOT; };
+		54ABD55017390CC800825BAD /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,7 @@
 				54ABD50A1738D1E700825BAD /* libUniversalDetector.a in Frameworks */,
 				54ABD3F41738CA6E00825BAD /* Foundation.framework in Frameworks */,
 				54ABD50E1738D20C00825BAD /* libc++.dylib in Frameworks */,
+				54ABD55117390CC800825BAD /* libiconv.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54ABD552173912E400825BAD /* libiconv.dylib in Frameworks */,
 				54ABD50D1738D20200825BAD /* libc++.dylib in Frameworks */,
 				54ABD50B1738D1EF00825BAD /* libUniversalDetector.a in Frameworks */,
 				54ABD4031738CA6F00825BAD /* SenTestingKit.framework in Frameworks */,
@@ -141,6 +148,7 @@
 		54ABD3F21738CA6E00825BAD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				54ABD55017390CC800825BAD /* libiconv.dylib */,
 				54ABD50C1738D20200825BAD /* libc++.dylib */,
 				54ABD4F81738D0FF00825BAD /* UniversalDetector.xcodeproj */,
 				54ABD3F31738CA6E00825BAD /* Foundation.framework */,
@@ -192,6 +200,7 @@
 		54ABD4EE1738CEC500825BAD /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				54ABD54D17390A1200825BAD /* 2ch.html */,
 				54ABD5251738DBF300825BAD /* ascii.html */,
 				54ABD5261738DBF300825BAD /* jijicom.html */,
 				54ABD5271738DBF300825BAD /* mingpao.html */,
@@ -314,6 +323,7 @@
 				54ABD5301738DBF300825BAD /* yomiuri.html in Resources */,
 				54ABD5341738DC0400825BAD /* InfoPlist.strings in Resources */,
 				54ABD5361738DC0900825BAD /* IGAutoStringTests-Info.plist in Resources */,
+				54ABD54E17390A1200825BAD /* 2ch.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +448,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/IGAutoUnicode.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IGAutoUnicode/IGAutoString-Prefix.pch";
+				GCC_PREFIX_HEADER = "IGAutoString/IGAutoString-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					External/UniversalDetector/UniversalDetector,
 					External/UniversalDetector/external/uchardet/src,
@@ -454,7 +464,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/IGAutoUnicode.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IGAutoUnicode/IGAutoString-Prefix.pch";
+				GCC_PREFIX_HEADER = "IGAutoString/IGAutoString-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					External/UniversalDetector/UniversalDetector,
 					External/UniversalDetector/external/uchardet/src,
@@ -473,12 +483,12 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IGAutoUnicode/IGAutoUnicode-Prefix.pch";
+				GCC_PREFIX_HEADER = "IGAutoString/IGAutoString-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					External/UniversalDetector/UniversalDetector,
 					External/UniversalDetector/external/uchardet/src,
 				);
-				INFOPLIST_FILE = "IGAutoUnicodeTests/IGAutoStringTests-Info.plist";
+				INFOPLIST_FILE = "IGAutoStringTests/IGAutoStringTests-Info.plist";
 				PRODUCT_NAME = IGAutoStringTests;
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = octest;
@@ -493,12 +503,12 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IGAutoUnicode/IGAutoUnicode-Prefix.pch";
+				GCC_PREFIX_HEADER = "IGAutoString/IGAutoString-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					External/UniversalDetector/UniversalDetector,
 					External/UniversalDetector/external/uchardet/src,
 				);
-				INFOPLIST_FILE = "IGAutoUnicodeTests/IGAutoStringTests-Info.plist";
+				INFOPLIST_FILE = "IGAutoStringTests/IGAutoStringTests-Info.plist";
 				PRODUCT_NAME = IGAutoStringTests;
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = octest;

@@ -42,13 +42,14 @@
                                @"ascii": @"PC graphics hardware is built around using an 8-bit code page",
                                @"jijicom": @"川口氏は４月、中国出張から予定通りに帰国せず",
                                @"theverge": @"The Flex tracks your sleep much like the Up, though with far less power.",
-                               @"yomiuri": @"群馬県下仁田町南野牧の荒船山（１４２３メートル）"
+                               @"yomiuri": @"群馬県下仁田町南野牧の荒船山（１４２３メートル）",
+                               @"2ch": @"携帯からもさらに使いやすくなったぞ。"
                                };
 
     [fixtures enumerateKeysAndObjectsUsingBlock:^(NSString* res, NSString* content, BOOL *stop) {
-        NSData* data = [IGAutoUnicodeTests fixtureWithResource:res];
+        NSData* data = [IGAutoStringTests fixtureWithResource:res];
         NSString* string = [self.unicode stringWithData:data];
-        STAssertNotNil(string, nil);
+        STAssertNotNil(string, [NSString stringWithFormat:@"convert failure for file %@.html", res]);
         STAssertTrue(([string rangeOfString:content].location != NSNotFound), [NSString stringWithFormat:@"\"%@\" not found", content]);
     }];
 }
