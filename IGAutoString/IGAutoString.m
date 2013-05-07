@@ -8,6 +8,8 @@
 
 #import "IGAutoString.h"
 #import "UniversalDetector.h"
+#import <iconv.h>
+#import <string.h>
 
 @implementation IGAutoString
 
@@ -51,6 +53,12 @@
     }
 
     return encoded;
+}
+
++(NSString*) stringWithData:(NSData *)data encoding:(NSString*)encoding {
+    // TODO implement me
+
+    return nil;
 }
 
 +(NSString*) stringWithData:(NSData*)data {
