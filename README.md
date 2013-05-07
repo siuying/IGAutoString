@@ -15,7 +15,7 @@ NSString* string = [IGAutoUnicode stringWithData:data];
 If you use CocoaPods, add following line to your Podfile:
 
 ```
-pod 'IGFastImage'
+pod 'IGAutoUnicode'
 ```
 
 Otherwise, add ```IGAutoUnicode/IGAutoUnicode.*```, as well as [UniversalDetector](https://github.com/siuying/UniversalDetector) to your project.
