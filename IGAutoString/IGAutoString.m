@@ -11,49 +11,58 @@
 #import <iconv.h>
 #import <string.h>
 
-// convert encoding
-char* ig_convert_encoding(const char *src, const char *tocode, const char *fromcode)
+static NSString* ig_convert_encoding(const char *src, const char *tocode, const char *fromcode)
 {
-    iconv_t cd;
-    size_t in, out, len, err;
-    char *dest, *outp, *inp = (char *) src;
-    
-    cd = iconv_open(tocode, fromcode);
+    // Open Iconv
+    iconv_t cd = iconv_open(tocode, fromcode);
     if (cd < 0)
         return NULL;
-    
+
+    // Config Iconv - ignore illegal sequences
     int argument = 1;
     iconvctl(cd, ICONV_SET_DISCARD_ILSEQ, &argument);
-    
-    in = strlen(src);
-    out = len = in * 3 / 2 + 1;
-    outp = dest = (char *) malloc(len);
-    
-    while (in > 0) {
-        err = iconv(cd, &inp, &in, &outp, &out);
-        if (err == (size_t)(-1)) {
-            if (errno == E2BIG) {
-                size_t used = outp - dest;
-                len *= 2;
-                
-                char *newdest = (char *) realloc(dest, len);
-                if (!newdest)
-                    break;
-                
-                dest = newdest;
-                outp = dest + used;
-                out = len - used - 1;
-            } else {
-                break;
-            }
-        }
+
+    size_t ileft = strlen(src);
+    size_t oleft = ileft;
+    char *op, *buf;
+    char *ip = (char*) src;
+    int olen = ileft + 1;
+
+    buf = malloc(olen);
+    if (!buf) {
+        iconv_close(cd);
+        return NULL;
     }
     
-    if (outp)
-        *outp = '\0';
+    op = buf;
     
+    while (iconv(cd, &ip, &ileft, &op, &oleft) == (size_t) -1) {
+        if (errno == E2BIG) {
+            char *newbuf;
+            /* Allocate as much additional space as iconv says we need */
+            newbuf = realloc(buf, olen + ileft + oleft);
+            if (!newbuf) {
+                free(buf);
+                iconv_close(cd);
+                return NULL;
+            }
+            buf = newbuf;
+            op = buf + (olen - oleft - 1);
+            olen += ileft;
+            oleft += ileft;
+            continue;
+        }
+
+        free(buf);
+        iconv_close(cd);
+        return NULL;
+    }
+    *(op++) = 0;
+
+    NSString* result = [NSString stringWithCString:buf encoding:NSUTF8StringEncoding];
+    free(buf);
     iconv_close(cd);
-    return dest;
+    return result;
 }
 
 @implementation IGAutoString
@@ -93,15 +102,9 @@ char* ig_convert_encoding(const char *src, const char *tocode, const char *fromc
     char buffer[[data length]+1];
     [data getBytes:buffer length:[data length]];
     buffer[data.length] = 0;
-
-	char *buf = ig_convert_encoding(buffer, "UTF-8", [encoding UTF8String]);
-    if (buf) {
-        NSString* result = [NSString stringWithCString:buf encoding:NSUTF8StringEncoding];
-        free(buf);
-        return result;
-    } else {
-        return nil;
-    }
+    
+    // convert the string
+    return ig_convert_encoding(buffer, "UTF-8", [encoding UTF8String]);;
 }
 
 +(NSString*) stringWithData:(NSData*)data {
