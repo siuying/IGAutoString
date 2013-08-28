@@ -89,7 +89,12 @@ char* ig_convert_encoding(const char *src, const char *tocode, const char *fromc
 }
 
 +(NSString*) stringWithData:(NSData *)data encoding:(NSString*)encoding {
-	char *buf = ig_convert_encoding((char*)[data bytes], "UTF-8", [encoding UTF8String]);
+    // create a buffer of null terminated string
+    char buffer[[data length]+1];
+    [data getBytes:buffer length:[data length]];
+    buffer[data.length] = 0;
+
+	char *buf = ig_convert_encoding(buffer, "UTF-8", [encoding UTF8String]);
     if (buf) {
         NSString* result = [NSString stringWithCString:buf encoding:NSUTF8StringEncoding];
         free(buf);
