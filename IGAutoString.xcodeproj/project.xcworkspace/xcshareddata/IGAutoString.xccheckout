@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>966EAB15-2350-4C58-AC69-D3DC09D2ED2D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>IGAutoString</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>04CC36A7-3626-484A-AD64-29351D32611A</key>
+		<string>ssh://github.com/siuying/IGAutoString.git</string>
+		<key>772C041F-E7C5-47EE-8FF3-829C47BF4A8C</key>
+		<string>ssh://github.com/siuying/UniversalDetector.git</string>
+		<key>CC5A3D0D-273F-40C4-811F-C36F9477F40E</key>
+		<string>ssh://github.com/BYVoid/uchardet.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>IGAutoString.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>04CC36A7-3626-484A-AD64-29351D32611A</key>
+		<string>../..</string>
+		<key>772C041F-E7C5-47EE-8FF3-829C47BF4A8C</key>
+		<string>../../External/UniversalDetector</string>
+		<key>CC5A3D0D-273F-40C4-811F-C36F9477F40E</key>
+		<string>../../External/UniversalDetector/external/uchardet</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/siuying/IGAutoString.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>04CC36A7-3626-484A-AD64-29351D32611A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>04CC36A7-3626-484A-AD64-29351D32611A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>IGAutoString</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CC5A3D0D-273F-40C4-811F-C36F9477F40E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>uchardet</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>772C041F-E7C5-47EE-8FF3-829C47BF4A8C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UniversalDetector</string>
+		</dict>
+	</array>
+</dict>
+</plist>
