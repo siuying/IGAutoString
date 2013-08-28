@@ -45,12 +45,23 @@
                                @"yomiuri": @"群馬県下仁田町南野牧の荒船山（１４２３メートル）",
                                @"2ch": @"携帯からもさらに使いやすくなったぞ。"
                                };
-
+    
     [fixtures enumerateKeysAndObjectsUsingBlock:^(NSString* res, NSString* content, BOOL *stop) {
         NSData* data = [IGAutoStringTests fixtureWithResource:res];
         NSString* string = [self.unicode stringWithData:data];
         STAssertNotNil(string, [NSString stringWithFormat:@"convert failure for file %@.html", res]);
         STAssertTrue(([string rangeOfString:content].location != NSNotFound), [NSString stringWithFormat:@"\"%@\" not found", content]);
+    }];
+}
+
+- (void)testValidateEquals
+{
+    NSArray* fixtures = @[@"Hello World", @"草木初生的芽", @"群馬県下仁田町南野牧の荒船山"];
+    
+    [fixtures enumerateObjectsUsingBlock:^(NSString* src, NSUInteger idx, BOOL *stop) {
+        NSString* string = [self.unicode stringWithData:[src dataUsingEncoding:NSUTF8StringEncoding]];
+        STAssertEquals([src length], [string length], @"should be same");
+        STAssertEqualObjects(src, string, @"should be same");
     }];
 }
 
