@@ -29,6 +29,7 @@
 		54ABD54E17390A1200825BAD /* 2ch.html in Resources */ = {isa = PBXBuildFile; fileRef = 54ABD54D17390A1200825BAD /* 2ch.html */; };
 		54ABD55117390CC800825BAD /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD55017390CC800825BAD /* libiconv.dylib */; };
 		54ABD552173912E400825BAD /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54ABD55017390CC800825BAD /* libiconv.dylib */; };
+		54FDB46117CF04E300D776C6 /* polish.html in Resources */ = {isa = PBXBuildFile; fileRef = 54FDB46017CF04E300D776C6 /* polish.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		54ABD5351738DC0900825BAD /* IGAutoStringTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "IGAutoStringTests-Info.plist"; path = "IGAutoStringTests/IGAutoStringTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		54ABD54D17390A1200825BAD /* 2ch.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = 2ch.html; path = IGAutoStringTests/Fixtures/2ch.html; sourceTree = SOURCE_ROOT; };
 		54ABD55017390CC800825BAD /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		54FDB46017CF04E300D776C6 /* polish.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = polish.html; path = IGAutoStringTests/Fixtures/polish.html; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				54ABD5261738DBF300825BAD /* jijicom.html */,
 				54ABD5271738DBF300825BAD /* mingpao.html */,
 				54ABD5281738DBF300825BAD /* moe.html */,
+				54FDB46017CF04E300D776C6 /* polish.html */,
 				54ABD5291738DBF300825BAD /* theverge.html */,
 				54ABD52A1738DBF300825BAD /* yomiuri.html */,
 			);
@@ -324,6 +327,7 @@
 				54ABD5341738DC0400825BAD /* InfoPlist.strings in Resources */,
 				54ABD5361738DC0900825BAD /* IGAutoStringTests-Info.plist in Resources */,
 				54ABD54E17390A1200825BAD /* 2ch.html in Resources */,
+				54FDB46117CF04E300D776C6 /* polish.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
