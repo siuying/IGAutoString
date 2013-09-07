@@ -11,7 +11,7 @@
 #import <iconv.h>
 #import <string.h>
 
-static NSString* ig_convert_encoding(const char *src, const char *tocode, const char *fromcode)
+static NSString* ig_convert_encoding(const char *src, size_t length, const char *tocode, const char *fromcode)
 {
     // Open Iconv
     iconv_t cd = iconv_open(tocode, fromcode);
@@ -22,7 +22,7 @@ static NSString* ig_convert_encoding(const char *src, const char *tocode, const 
     int argument = 1;
     iconvctl(cd, ICONV_SET_DISCARD_ILSEQ, &argument);
 
-    size_t ileft = strlen(src);
+    size_t ileft = length;
     size_t oleft = ileft;
     char *op, *buf;
     char *ip = (char*) src;
@@ -98,13 +98,7 @@ static NSString* ig_convert_encoding(const char *src, const char *tocode, const 
 }
 
 +(NSString*) stringWithData:(NSData *)data encoding:(NSString*)encoding {
-    // create a buffer of null terminated string
-    char buffer[[data length]+1];
-    [data getBytes:buffer length:[data length]];
-    buffer[data.length] = 0;
-    
-    // convert the string
-    return ig_convert_encoding(buffer, "UTF-8", [encoding UTF8String]);;
+    return ig_convert_encoding([data bytes], [data length], "UTF-8", [encoding UTF8String]);
 }
 
 +(NSString*) stringWithData:(NSData*)data {
