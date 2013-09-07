@@ -1,0 +1,7 @@
+---
+  language: objective-c
+  before_install:
+    - git submodule update --init --recursive
+    - brew update
+    - brew unlink xctool && brew install xctool --HEAD
+  script: "rake test"
