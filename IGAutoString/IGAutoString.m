@@ -15,7 +15,7 @@ static NSString* ig_convert_encoding(const char *src, size_t length, const char 
 {
     // Open Iconv
     iconv_t cd = iconv_open(tocode, fromcode);
-    if (cd < 0)
+    if (cd == (NSUInteger)(-1))
         return NULL;
 
     // Config Iconv - ignore illegal sequences
